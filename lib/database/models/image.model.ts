@@ -37,10 +37,12 @@ const ImageSchema = new Schema(
         color: { type: String, required: false },
         prompt: { type: String, required: false },
         author: { type: Schema.Types.ObjectId, ref: 'User' },
+        createdAt: { type: Date, default: Date.now },
+        updatedAt: { type: Date, default: Date.now },
     },
     { timestamps: true }
 );
 
-const Image = models?.Image || model<IImage>('Image', ImageSchema);
+const Image = models?.Image || model('Image', ImageSchema);
 
 export default Image;
