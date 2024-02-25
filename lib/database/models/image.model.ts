@@ -1,5 +1,5 @@
 import { Schema, model, models } from "mongoose";
-import { IUser } from "./user.model";
+// import { IUser } from "./user.model";
 
 interface IImage extends Document {
     title: string;
